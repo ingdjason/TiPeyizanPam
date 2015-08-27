@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.djamoli.tipeyizanpam" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ActivityTwo" />
+        <activity android:name=".ActivityFruits"/>
+        <activity android:name=".ActivityHotels"/>
+        <activity android:name=".ActivityPlages"/>
+        <activity android:name=".ActivitySites"/>
+
+
+        <activity
+            android:name=".TabFruits"
+            android:label="@string/title_activity_tab_fruits" >
+        </activity>
+        <activity
+            android:name=".TabHotels"
+            android:label="@string/title_activity_tab_hotels" >
+        </activity>
+        <activity
+            android:name=".TabPlages"
+            android:label="@string/title_activity_tab_plages" >
+        </activity>
+        <activity
+            android:name=".TabSites"
+            android:label="@string/title_activity_tab_sites" >
+        </activity>
+    </application>
+
+</manifest>

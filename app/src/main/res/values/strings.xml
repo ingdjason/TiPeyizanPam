@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TiPeyizanPam</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_tab_fruits">TabFruits</string>
+    <string name="title_activity_tab_hotels">TabHotels</string>
+    <string name="title_activity_tab_plages">TabPlages</string>
+    <string name="title_activity_tab_sites">TabSites</string>
+    <string name="image">Image thumbnail</string>
+</resources>
