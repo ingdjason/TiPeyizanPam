@@ -4,386 +4,78 @@
     android:layout_height="match_parent"
     android:visibility="visible">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:id="@+id/imageView15"
-        android:background="@drawable/slide"
-        android:maxHeight="160dp"
-        android:scaleType="fitXY"
-        android:adjustViewBounds="true"
-        android:src="@drawable/slide"
-        android:clickable="false"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+    <ViewFlipper
+        android:id="@+id/view_flipper"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:id="@+id/im"
+                android:layout_height="250dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/slide"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/im_portsalut" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/im_sanssouci" />
+
+        </RelativeLayout>
+    </ViewFlipper>
+    <LinearLayout
+        style="@style/ButtonContainer"
+        android:orientation="horizontal"
+        android:layout_height="10dp"
+        android:id="@+id/linearLayout">
+
+        <Button
+            android:id="@+id/play"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_marginRight="10dp"
+            android:background="@android:drawable/ic_media_play" />
+
+        <Button
+            android:id="@+id/stop"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:background="@android:drawable/ic_media_pause" />
+    </LinearLayout>
 
 
         <!-- android:background="@drawable/slide" -->
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/scrollView"
-        android:layout_below="@+id/imageView15"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="2dp"
-        android:layout_marginStart="91dp"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true">
-    <LinearLayout
-        android:id="@+id/content"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="#F5FED3"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-
-        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="#9ED7A2">
-            <!-- Fruits -->
-
-            <TableRow
-                android:paddingTop="3dp"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:background="#F5FED3">
-                <TextView
-                    android:layout_weight=".25"
-                    android:layout_width="0dp"
-                    android:gravity="center"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="Fwi"
-                    android:id="@+id/textView2"
-                    android:visibility="visible"
-                    android:textColor="#0F7939"
-                    android:background="#F5FED3"
-                    android:textStyle="italic"
-                    android:textSize="20sp" />
-
-                <Button
-                    style="?android:attr/buttonStyleSmall"
-                    android:layout_weight=".25"
-                    android:layout_width="0dp"
-                    android:gravity="center"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="2dp"
-                    android:layout_height="30dp"
-                    android:text="plis fwi"
-                    android:id="@+id/fruitsBtn"
-                    android:background="@drawable/custom_button"
-                    android:textColor="#F5FED3"
-                    android:textStyle="italic"
-                    android:ellipsize="middle"
-                    android:focusable="true"
-                    android:focusableInTouchMode="true"
-                    android:layout_column="96"
-                    android:textSize="15sp" />
-
-                </TableRow>
-
-            <!-- table fruits -->
-            <TableRow
-                android:paddingTop="1dp"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:background="#F5FED3">
-
-
-
-                <ImageView
-                    android:layout_weight=".25"
-                    android:layout_width="25dp"
-                    android:gravity="center"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_height="100dp"
-                    android:id="@+id/imageView3"
-                    android:background="@drawable/variete"/>
-
-                <ImageView
-                    android:layout_weight=".25"
-                    android:layout_width="25dp"
-                    android:gravity="center"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_height="100dp"
-                    android:id="@+id/imageView4"
-                    android:background="@drawable/fruits_jaca"/>
-
-                <ImageView
-                    android:layout_weight=".25"
-                    android:layout_width="25dp"
-                    android:gravity="center"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_height="100dp"
-                    android:id="@+id/imageView5"
-                    android:background="@drawable/im_mandarine" />
-
-            </TableRow>
-
-            <!-- Table hotels -->
-            <TableRow
-                android:paddingTop="3dp"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:background="#F5FED3">
-
-                <TextView
-                    android:layout_weight=".25"
-                    android:layout_width="0dp"
-                    android:gravity="center"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="otèl"
-                    android:id="@+id/textView3"
-                    android:visibility="visible"
-                    android:textColor="#0F7939"
-                    android:background="#F5FED3"
-                    android:textStyle="italic"
-                    android:textSize="20sp" />
-
-                <Button
-                    style="?android:attr/buttonStyleSmall"
-                    android:layout_weight=".25"
-                    android:layout_width="0dp"
-                    android:gravity="center"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="2dp"
-                    android:layout_height="30dp"
-                    android:text="plis otel"
-                    android:id="@+id/hotelsBtn"
-                    android:background="@drawable/custom_button"
-                    android:textColor="#F5FED3"
-                    android:textStyle="italic"
-                    android:ellipsize="middle"
-                    android:focusable="true"
-                    android:focusableInTouchMode="true"
-                    android:layout_column="96"
-                    android:textSize="15sp" />
-
-                </TableRow>
-<!-- Table hotels -->
-            <TableRow
-                android:paddingTop="1dp"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:background="#F5FED3">
-
-
-
-                <ImageView
-                    android:layout_weight=".25"
-                    android:layout_width="25dp"
-                    android:gravity="center"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_height="100dp"
-                    android:id="@+id/imageView6"
-                    android:background="@drawable/im_marriott"/>
-
-                <ImageView
-                    android:layout_weight=".25"
-                    android:layout_width="25dp"
-                    android:gravity="center"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_height="100dp"
-                    android:id="@+id/imageView7"
-                    android:background="@drawable/im_bestwestern"/>
-
-                <ImageView
-                    android:layout_weight=".25"
-                    android:layout_width="25dp"
-                    android:gravity="center"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_height="100dp"
-                    android:id="@+id/imageView8"
-                    android:background="@drawable/im_elrancho" />
-            </TableRow>
-<!-- table plages -->
-            <TableRow
-                android:paddingTop="3dp"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:background="#F5FED3">
-
-                <TextView
-                    android:layout_weight=".25"
-                    android:layout_width="0dp"
-                    android:gravity="center"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="Plaj"
-                    android:id="@+id/textView4"
-                    android:visibility="visible"
-                    android:textColor="#0F7939"
-                    android:background="#F5FED3"
-                    android:textStyle="italic"
-                    android:textSize="20sp"
-                    android:textAlignment="center" />
-
-                <Button
-                    style="?android:attr/buttonStyleSmall"
-                    android:layout_weight=".25"
-                    android:layout_width="0dp"
-                    android:gravity="center"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="2dp"
-                    android:layout_height="30dp"
-                    android:text="plis plaj"
-                    android:id="@+id/plagesBtn"
-                    android:background="@drawable/custom_button"
-                    android:textColor="#F5FED3"
-                    android:textStyle="italic"
-                    android:ellipsize="middle"
-                    android:focusable="true"
-                    android:focusableInTouchMode="true"
-                    android:layout_column="96"
-                    android:textSize="15sp" />
-
-            </TableRow>
-
-            <!-- Table plages -->
-            <TableRow
-                android:paddingTop="1dp"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:background="#F5FED3">
-
-                <ImageView
-                    android:layout_weight=".25"
-                    android:layout_width="25dp"
-                    android:gravity="center"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_height="100dp"
-                    android:id="@+id/imageView9"
-                    android:background="@drawable/im_labadee"/>
-
-                <ImageView
-                    android:layout_weight=".25"
-                    android:layout_width="25dp"
-                    android:gravity="center"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_height="100dp"
-                    android:id="@+id/imageView10"
-                    android:background="@drawable/im_portsalut"/>
-
-                <ImageView
-                    android:layout_weight=".25"
-                    android:layout_width="25dp"
-                    android:gravity="center"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_height="100dp"
-                    android:id="@+id/imageView11"
-                    android:background="@drawable/im_ileavache" />
-
-            </TableRow>
-<!-- table sites -->
-            <TableRow
-                android:paddingTop="3dp"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:background="#F5FED3">
-
-                <TextView
-                    android:layout_weight=".25"
-                    android:layout_width="0dp"
-                    android:gravity="center"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="Sit touristik"
-                    android:id="@+id/textView5"
-                    android:visibility="visible"
-                    android:textColor="#0F7939"
-                    android:background="#F5FED3"
-                    android:textStyle="italic"
-                    android:textSize="20sp" />
-
-                <Button
-                    style="?android:attr/buttonStyleSmall"
-                    android:layout_weight=".25"
-                    android:layout_width="0dp"
-                    android:gravity="center"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="2dp"
-                    android:layout_height="30dp"
-                    android:text="plis sit"
-                    android:id="@+id/sitesBtn"
-                    android:background="@drawable/custom_button"
-                    android:textColor="#F5FED3"
-                    android:textStyle="italic"
-                    android:ellipsize="middle"
-                    android:focusable="true"
-                    android:focusableInTouchMode="true"
-                    android:layout_column="96"
-                    android:textSize="15sp" />
-
-            </TableRow>
-
-            <!-- Table sites -->
-            <TableRow
-                android:paddingTop="1dp"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.25"
-                android:background="#F5FED3">
-
-                <ImageView
-                    android:layout_weight=".25"
-                    android:layout_width="25dp"
-                    android:gravity="center"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_height="100dp"
-                    android:id="@+id/imageView12"
-                    android:background="@drawable/im_sanssouci"/>
-
-                <ImageView
-                    android:layout_weight=".25"
-                    android:layout_width="25dp"
-                    android:gravity="center"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_height="100dp"
-                    android:id="@+id/imageView13"
-                    android:background="@drawable/im_mupanah"/>
-
-                <ImageView
-                    android:layout_weight=".25"
-                    android:layout_width="25dp"
-                    android:gravity="center"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginRight="4dp"
-                    android:layout_height="100dp"
-                    android:id="@+id/imageView14"
-                    android:background="@drawable/im_seaudeau" />
-            </TableRow>
-
-        </TableLayout>
-
-
-    </LinearLayout>
-    </ScrollView>
 
     <EditText
         android:layout_width="fill_parent"
@@ -412,7 +104,371 @@
         android:background="@drawable/custom_button"
         android:textSize="15sp"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/linearLayout" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/view_flipper"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#F5FED3"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#9ED7A2">
+                <!-- Fruits -->
+
+                <TableRow
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="#F5FED3">
+                    <TextView
+                        android:layout_weight=".25"
+                        android:layout_width="0dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Fwi"
+                        android:id="@+id/textView2"
+                        android:visibility="visible"
+                        android:textColor="#0F7939"
+                        android:background="#F5FED3"
+                        android:textStyle="italic"
+                        android:textSize="20sp" />
+
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_weight=".25"
+                        android:layout_width="0dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_height="30dp"
+                        android:text="plis fwi"
+                        android:id="@+id/fruitsBtn"
+                        android:background="@drawable/custom_button"
+                        android:textColor="#F5FED3"
+                        android:textStyle="italic"
+                        android:ellipsize="middle"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:layout_column="96"
+                        android:textSize="15sp" />
+
+                </TableRow>
+
+                <!-- table fruits -->
+                <TableRow
+                    android:paddingTop="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="#F5FED3">
+
+
+
+                    <ImageView
+                        android:layout_weight=".25"
+                        android:layout_width="25dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/imageView3"
+                        android:background="@drawable/variete"/>
+
+                    <ImageView
+                        android:layout_weight=".25"
+                        android:layout_width="25dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/imageView4"
+                        android:background="@drawable/fruits_jaca"/>
+
+                    <ImageView
+                        android:layout_weight=".25"
+                        android:layout_width="25dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/imageView5"
+                        android:background="@drawable/im_mandarine" />
+
+                </TableRow>
+
+                <!-- Table hotels -->
+                <TableRow
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="#F5FED3">
+
+                    <TextView
+                        android:layout_weight=".25"
+                        android:layout_width="0dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="otèl"
+                        android:id="@+id/textView3"
+                        android:visibility="visible"
+                        android:textColor="#0F7939"
+                        android:background="#F5FED3"
+                        android:textStyle="italic"
+                        android:textSize="20sp" />
+
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_weight=".25"
+                        android:layout_width="0dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_height="30dp"
+                        android:text="plis otel"
+                        android:id="@+id/hotelsBtn"
+                        android:background="@drawable/custom_button"
+                        android:textColor="#F5FED3"
+                        android:textStyle="italic"
+                        android:ellipsize="middle"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:layout_column="96"
+                        android:textSize="15sp" />
+
+                </TableRow>
+                <!-- Table hotels -->
+                <TableRow
+                    android:paddingTop="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="#F5FED3">
+
+
+
+                    <ImageView
+                        android:layout_weight=".25"
+                        android:layout_width="25dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/imageView6"
+                        android:background="@drawable/im_marriott"/>
+
+                    <ImageView
+                        android:layout_weight=".25"
+                        android:layout_width="25dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/imageView7"
+                        android:background="@drawable/im_bestwestern"/>
+
+                    <ImageView
+                        android:layout_weight=".25"
+                        android:layout_width="25dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/imageView8"
+                        android:background="@drawable/im_elrancho" />
+                </TableRow>
+                <!-- table plages -->
+                <TableRow
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="#F5FED3">
+
+                    <TextView
+                        android:layout_weight=".25"
+                        android:layout_width="0dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Plaj"
+                        android:id="@+id/textView4"
+                        android:visibility="visible"
+                        android:textColor="#0F7939"
+                        android:background="#F5FED3"
+                        android:textStyle="italic"
+                        android:textSize="20sp"
+                        android:textAlignment="center" />
+
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_weight=".25"
+                        android:layout_width="0dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_height="30dp"
+                        android:text="plis plaj"
+                        android:id="@+id/plagesBtn"
+                        android:background="@drawable/custom_button"
+                        android:textColor="#F5FED3"
+                        android:textStyle="italic"
+                        android:ellipsize="middle"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:layout_column="96"
+                        android:textSize="15sp" />
+
+                </TableRow>
+
+                <!-- Table plages -->
+                <TableRow
+                    android:paddingTop="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="#F5FED3">
+
+                    <ImageView
+                        android:layout_weight=".25"
+                        android:layout_width="25dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/imageView9"
+                        android:background="@drawable/im_labadee"/>
+
+                    <ImageView
+                        android:layout_weight=".25"
+                        android:layout_width="25dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/imageView10"
+                        android:background="@drawable/im_portsalut"/>
+
+                    <ImageView
+                        android:layout_weight=".25"
+                        android:layout_width="25dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/imageView11"
+                        android:background="@drawable/im_ileavache" />
+
+                </TableRow>
+                <!-- table sites -->
+                <TableRow
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="#F5FED3">
+
+                    <TextView
+                        android:layout_weight=".25"
+                        android:layout_width="0dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Sit touristik"
+                        android:id="@+id/textView5"
+                        android:visibility="visible"
+                        android:textColor="#0F7939"
+                        android:background="#F5FED3"
+                        android:textStyle="italic"
+                        android:textSize="20sp" />
+
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_weight=".25"
+                        android:layout_width="0dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_height="30dp"
+                        android:text="plis sit"
+                        android:id="@+id/sitesBtn"
+                        android:background="@drawable/custom_button"
+                        android:textColor="#F5FED3"
+                        android:textStyle="italic"
+                        android:ellipsize="middle"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:layout_column="96"
+                        android:textSize="15sp" />
+
+                </TableRow>
+
+                <!-- Table sites -->
+                <TableRow
+                    android:paddingTop="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.25"
+                    android:background="#F5FED3">
+
+                    <ImageView
+                        android:layout_weight=".25"
+                        android:layout_width="25dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/imageView12"
+                        android:background="@drawable/im_sanssouci"/>
+
+                    <ImageView
+                        android:layout_weight=".25"
+                        android:layout_width="25dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/imageView13"
+                        android:background="@drawable/im_mupanah"/>
+
+                    <ImageView
+                        android:layout_weight=".25"
+                        android:layout_width="25dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_height="100dp"
+                        android:id="@+id/imageView14"
+                        android:background="@drawable/im_seaudeau" />
+                </TableRow>
+
+            </TableLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
 
 
 </RelativeLayout>
